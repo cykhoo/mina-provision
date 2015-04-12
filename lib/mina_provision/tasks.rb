@@ -308,6 +308,7 @@ namespace 'misc' do
     app_nginx_config = erb(nginx_template_location)
     queue! %[echo -n '#{app_nginx_config}' | sudo tee /etc/nginx/sites-available/#{app_name}]
     queue! %[sudo ln -s /etc/nginx/sites-available/#{app_name} /etc/nginx/sites-enabled/#{app_name}]
+    queue! %[sudo rm /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default]
     queue! %[sudo service nginx restart]
   end
 
