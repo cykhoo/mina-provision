@@ -1,4 +1,4 @@
-require 'mina_provision/tasks'
+require 'mina_provision'
 
 set :domain,        '172.16.86.122'
 set :user,          'deployer'
