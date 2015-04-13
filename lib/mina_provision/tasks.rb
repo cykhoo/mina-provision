@@ -303,7 +303,7 @@ namespace 'misc' do
 
   desc "Configure Nginx"
   task :config_nginx => :environment do
-    template_dir = File.expand_path('../../templates', __FILE__)
+    template_dir = File.expand_path('../templates', __FILE__)
     nginx_template_location = template_dir + '/nginx_conf.erb'
     app_nginx_config = erb(nginx_template_location)
     queue! %[echo -n '#{app_nginx_config}' | sudo tee /etc/nginx/sites-available/#{app_name}]
