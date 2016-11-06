@@ -7,7 +7,7 @@ set :port,          '22'
 set :deploy_to,     ''
 
 set :timezone,      'Asia/Singapore'
-set :ruby_version,  '2.2.2'
+set :ruby_version,  '2.3.1'
 set :app_name,      'guides'
 set :cert_name,     'cantab-ip.com'
 
