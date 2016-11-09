@@ -12,7 +12,7 @@ set :app_name,      'guides'
 set :cert_name,     'cantab-ip.com'
 
 task :environment do
-  queue %{ echo "-----> Loading ~/.bash_profile"
+  command %{ echo "-----> Loading ~/.bash_profile"
            #{echo_cmd %[source ~/.bash_profile]}   }
   invoke :'rbenv:load'
 end
